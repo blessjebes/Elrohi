@@ -1,0 +1,57 @@
+<!--
+  Generated template for the NetworkreportPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="navbar"  text-center>
+  
+    <ion-title><ion-icon name="git-network"></ion-icon> Network Report</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-item>
+  <ion-label>Date & Time :</ion-label>
+  <ion-datetime displayFormat="MMM DD, YYYY HH:mm"  min="2018" max="2020-10-31" [(ngModel)]="date_time"></ion-datetime>
+</ion-item>
+<ion-item>
+    <ion-label floating>Name & Address :</ion-label>
+    <ion-input type="text" [(ngModel)]="name_address"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Name of Proprietor :</ion-label>
+    <ion-input type="text" [(ngModel)]="proprietor"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Contact Person :</ion-label>
+    <ion-input type="text" [(ngModel)]="contact_person"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Existing Biz :</ion-label>
+    <ion-input type="text" [(ngModel)]="existing_biz"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Area & Divn. Covering :</ion-label>
+    <ion-input type="text" [(ngModel)]="area_covering"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Comment & Remarks :</ion-label>
+    <ion-input type="text" [(ngModel)]="comment"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label floating>Follow Up :</ion-label>
+    <ion-input type="text" [(ngModel)]="followup"></ion-input>
+</ion-item>
+<br>
+<br>
+<button ion-button full icon-end (click)="send_nw_report()">
+  SEND REPORT
+  <ion-icon name="send"></ion-icon>
+</button>
+
+</ion-content>

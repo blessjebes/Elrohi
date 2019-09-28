@@ -1,0 +1,27 @@
+<ion-header>
+   <ion-navbar color="navbar">
+      <ion-title text-center>
+	  <ion-icon name="paper-plane"></ion-icon>
+           SEND REPORT
+      </ion-title>
+   </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Retailer Name :</ion-label>
+    <ion-input type="text" [(ngModel)]="retailer_name" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Store Name :</ion-label>
+    <ion-input type="text" [(ngModel)]="store_name" required="required"  ></ion-input>
+  </ion-item>
+  <br>
+  <br>
+  <button ion-button block margin-top color="primary" text-center (click)="sendreport()" icon-end >
+ 
+  Send Report  <ion-icon name="mail"></ion-icon></button>
+  
+
+</ion-content>

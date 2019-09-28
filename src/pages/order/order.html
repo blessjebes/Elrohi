@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="navbar" >
+    <ion-title text-center><ion-icon name="cart"></ion-icon>  TAKE ORDER</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+   <form [formGroup]="form"(ngSubmit)="complete_order(form.value)">
+   	  <ion-list margin-bottom>
+         <ion-item margin-bottom >
+            <ion-label floating color="navbar">Store name:</ion-label>
+            <ion-input type="text" maxlength="50" formControlName="store_name"></ion-input>
+            <span>Please enter a Store Name</span>
+         </ion-item>
+
+	     <div formArrayName="products" margin-bottom>
+
+            <section [formGroupName]="i" *ngFor="let prod of form.controls.products.controls; let i = index">
+               <ion-item-group>
+					<ion-item margin-bottom> 
+			
+					<ion-select placeholder="Select Product" formControlName="product_name">
+						<ion-option value="KERALA SANDAL 75g">KERALA SANDAL 75g</ion-option>
+						<ion-option value="KERALA SANDAL 125g">KERALA SANDAL 125g</ion-option>
+						<ion-option value="KERALA SANDAL 150g">KERALA SANDAL 150g</ion-option>
+						<ion-option value="TRIO PACK">TRIO PACK</ion-option>
+						<ion-option value="VEP single">VEP</ion-option>
+						<ion-option value="VEP Banded">VEP BANDED</ion-option>
+						<ion-option value="THRILL EXOTIC">THRILL EXOTIC</ion-option>
+						<ion-option value="THRILL CHEMPAKAM SINGLE">THRILL CHEMPAKAM</ion-option>
+						<ion-option value="THRILL CHEMPAKAM BANDED">THRILL CHEMPAKAM BANDED</ion-option>
+						<ion-option value="KAIRALI LAVENDER">KAIRALI LAVENDER</ion-option>
+						<ion-option value="KAIRALI LOVELY PINK">KAIRALI LOVELY PINK</ion-option>
+						<ion-option value="KAIRALI JASMINE">KAIRALI JASMINE</ion-option>
+						<ion-option value="KAIRALI JASMINE BANDED">KAIRALI JASMINE BANDED</ion-option>
+						<ion-option value="COALTAR">COALTAR</ion-option>
+						<ion-option value="KAIRALI">KAIRALI</ion-option>
+						<ion-option value="WASHWELL">WASHWELL</ion-option>
+					</ion-select>
+					</ion-item>
+                  <ion-item margin-bottom>
+                     <ion-input type="number" placeholder="Quantity" formControlName="product_quantity"></ion-input>
+                  </ion-item>
+
+                  <span float-right ion-button color="red" icon-left round small *ngIf="form.controls.products.length > 1" (click)="removeInputField(i)">
+                     <ion-icon name="close" ></ion-icon>
+                     Remove
+                  </span>
+               </ion-item-group>
+            </section>
+         </div>
+
+
+         <span ion-button color="tertiary" float-left icon-left round small (click)="addNewInputField()">
+               <ion-icon name="add" ></ion-icon>
+               Add More
+         </span>
+		 
+
+
+   	 </ion-list>
+		<br/>
+		<br/>
+		<br/>
+		 <span ion-button block margin-top color="medium" text-center  (click)="store_order()">Store Order</span>
+		 <br/>
+         <button ion-button block margin-top color="primary" text-center [disabled]="!form.valid">Send Order</button>
+   </form>
+
+</ion-content>

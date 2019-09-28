@@ -1,0 +1,81 @@
+<!--<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title align="center">
+      ELROHI ENTERPRISES
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+<ion-card-header color="medium" text-wrap text-center>
+Welcome to Elrohi Enterprises
+  </ion-card-header>
+  <br>
+<button ion-button full icon-start (click)="productspage()" > 
+<ion-icon name="logo-dropbox"></ion-icon>
+  PRODUCTS
+  
+</button>
+<br>
+<br>
+<button ion-button full icon-start (click)="orderpage()">
+ <ion-icon name="cart" ></ion-icon> ORDER
+  
+</button>
+<br>
+<br>
+<button ion-button full icon-start (click)="lastsummarypage()">
+  <ion-icon name="link"></ion-icon>
+  VIEW LAST SUMMARY
+  
+</button>
+<br>
+<br>
+<button ion-button full icon-start (click)="networkreportpage()">
+   <ion-icon name="git-network"></ion-icon>SEND NETWORK REPORT
+ 
+</button>
+<br>
+<br>
+<br>
+<div align="center">
+<button class="my-button" ion-button round  outline icon-start text-center (click)="sendreportpage()" color="primary">
+  <ion-icon name="send"></ion-icon> REPORT MANAGER
+  
+</button>
+</div>
+</ion-content>-->
+
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title align="center">
+      <img  src="assets/imgs/logo.png"/>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content  class="card-background-page">
+
+	<ion-card  (click)="productspage()">
+    <img  src="assets/imgs/buttons/products.jpg"/>
+    <div class="card-title">P R O D U C T S</div>
+  </ion-card>
+  <ion-card (click)="orderpage()">
+    <img class="myOverlay" src="assets/imgs/buttons/order.jpg"/>
+    <div class="card-title">O R D E R</div>
+  </ion-card>
+    <ion-card (click)="lastsummarypage()">
+    <img class="myOverlay" src="assets/imgs/buttons/last_order.jpg"/>
+    <div class="card-title">L A S T  O R D E R</div>
+  </ion-card>
+    <ion-card (click)="networkreportpage()">
+    <img class="myOverlay" src="assets/imgs/buttons/network_report.jpg"/>
+    <div class="card-title">SEND NETWORK REPORT</div>
+  </ion-card>
+  <ion-card (click)="sendreportpage()">
+    <img class="myOverlay" src="assets/imgs/buttons/report_manager.jpg"/>
+    <div class="card-title">REPORT MANAGER</div>
+  </ion-card>
+</ion-content>
+
+

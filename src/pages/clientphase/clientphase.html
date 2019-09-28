@@ -1,0 +1,583 @@
+<!--
+  Generated template for the ClientphasePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="navbar">
+    <ion-title text-center>{{navTitle}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+		<!-- Form 1 -- -->
+<form *ngIf="phase_1">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap >
+		Become a staffing vendor for employers (hiring company/client)
+  </ion-card-header> 
+</ion-card>
+<ion-list>
+<p  text-center>KPI Unit: Count</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_1" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_1" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_1" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_1" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;" ion-button (click)="client_phase_2()" icon-end >Next<ion-icon item-left name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+		<!-- Form 2 -- -->
+<form *ngIf="phase_2">
+<ion-card> 
+  <ion-card-header ion-text color="light" text-wrap  >
+		Actively interact with hiring managers within those employers
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Count</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_2" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_2" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_2" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_2" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full (click)="client_phase_3()" ion-button icon-end >Next<ion-icon item-right name="arrow-round-forward"></ion-icon></button>
+</form>
+
+<!-- Form 3 -- -->
+<form *ngIf="phase_3">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+		Receive job openings from those hiring managers
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Count</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_3" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_3" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_3" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_3" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_4()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 4 -- -->
+<form *ngIf="phase_4">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+		Submit suitable candidates for those job openings faster than competition
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_4" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_4" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_4" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_4" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_5()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 5 -- -->
+<form *ngIf="phase_5">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+		Submitted candidates stand out from the competing candidates
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_5" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_5" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_5" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_5" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_6()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 6 -- -->
+<form *ngIf="phase_6">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+		Submitted candidates out-perform competing candidates
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_6" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_6" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_6" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_6" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_7()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 7 -- -->
+<form *ngIf="phase_7">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+Submitted candidates are selected for the job opening
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_7" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_7" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_7" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_7" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_8()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 8 -- -->
+<form *ngIf="phase_8">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+		Candidate turned consultant performs the best at work
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_8" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_8" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_8" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_8" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_9()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 9 -- -->
+<form *ngIf="phase_9">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+Hiring manager is delighted with the performance of the consultant
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_9" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_9" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_9" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_9" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_10()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 10 -- -->
+<form *ngIf="phase_10">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+  Hiring manager continues to extend as realistically possible
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_10" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_10" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_10" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_10" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_11()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 11 -- -->
+<form *ngIf="phase_11">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+		Hiring manager asks for similar candidates
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_11" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_11" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_11" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_11" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_12()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 12 -- -->
+<form *ngIf="phase_12">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+  Hiring manager re-hires the same candidate for future job openings
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_12" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_12" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_12" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_12" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_13()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 13 -- -->
+<form *ngIf="phase_13">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+Consultant is delighted with the consulting engagement
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_13" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_13" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_13" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_13" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_14()" ion-button icon-end >Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 14-- -->
+<form *ngIf="phase_14">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+  Consultant asks for similar consulting engagements
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_14" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_14" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_14" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_14" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="client_phase_15()" ion-button icon-end>Next<ion-icon name="arrow-round-forward"></ion-icon>
+</button>
+</form>
+
+<!-- Form 115 -- -->
+<form *ngIf="phase_15">
+<ion-card>
+  <ion-card-header ion-text color="light" text-wrap  >
+Repeat this success with other employers, hiring managers and consultants
+  </ion-card-header>
+</ion-card>
+<ion-list>
+<p text-center>KPI Unit: Percentage</p>
+	  	<ion-item transparent>                     
+					<ion-label color="secondary">Dream Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="dg_15" [ngModelOptions]="{standalone: true}" ></ion-input>			
+		</ion-item>
+<br>
+		<ion-item transparent>                     
+					<ion-label color="secondary">2018 Goal:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="year_goal_15" [ngModelOptions]="{standalone: true}" ></ion-input>
+		</ion-item>
+<br>
+<ion-item transparent>                     
+					<ion-label color="secondary">Current State:</ion-label>
+                    <ion-input  type="number" [(ngModel)]="current_state_15" [ngModelOptions]="{standalone: true}" ></ion-input>				
+		</ion-item>
+<br>
+<ion-item>
+  <ion-label color="secondary">Importance:</ion-label>
+  <ion-select [(ngModel)]="importance_15" [ngModelOptions]="{standalone: true}">
+    <ion-option value="low">Low</ion-option> <ion-option value="medium">Medium</ion-option>
+    <ion-option value="high">High</ion-option><ion-option value="critical">Critical</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+</ion-list>
+<br>
+<button full style="align:center;"(click)="submit()" ion-button icon-end >Complete<ion-icon name="checkmark-circle"></ion-icon></button>
+</form>
+</ion-content>

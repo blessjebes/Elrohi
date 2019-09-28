@@ -1,0 +1,133 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+$colors: (
+  primary:    #e74c3c, 
+  secondary : #32db64,
+  tertiary : #1ABC9C,
+  success: #10dc60,
+  warning: #ffce00,
+  medium: #989aa2,
+  light  : #fff,
+  grey : #bababa,
+  navbar : #d64637,
+  badge : #0d5e87,
+  red: #ff6666,
+  green:#40C9C5,
+  // Other colors removed for brevity
+);
+
+.my-button:hover{
+    background-color: #e74c3c !important;
+	color : #fff;
+	border-color: #e74c3c !important;
+}
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+@import "ionic.theme.default"; // App Animation
+// --------------------------------------------------
+
+@import "animate"; // App Main Sass
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+//@import "ionic.theme.dark";
+
+//@import "blue-light-theme";
+//@import "red-theme";
+//@import "green-theme";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+ion-card-header {
+    
+	font-weight: bold;
+	font-size: 15px;
+	color : #fff;
+}
+
+.titleicon {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align:center;
+}
+
+.titleicon div{
+display:inline-block;
+margin-bottom:10px;
+}
+
+
+// // App Fontelo Style
+//--------------------------------------------------
+@import "fontello";
+@import "ionicons"; // Fonts
+// --------------------------------------------------
+@import "roboto";
+
+
+
